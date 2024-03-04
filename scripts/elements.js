@@ -23,7 +23,7 @@ export function Iterate_Car_Models(Car_Model)
     Car_Element.style.cssText = `
                                     display: grid; 
                                     width: 100%;
-                                    height: 100%;
+                                    height: 80%;
                                     grid-template-columns: 100%;
                                     grid-template-rows: 44% repeat(7, 8%);
                                 `;
