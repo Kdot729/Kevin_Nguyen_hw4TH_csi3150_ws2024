@@ -6,13 +6,13 @@ function Setup_Grid()
 {
     let Grid_Container = document.getElementById("showcase-cars");
     let Column_Size = innerWidth / 5;
-    let Row_Size = innerHeight / 4;
+    let Row_Size = innerHeight / 3;
     Grid_Container.style.cssText =  `
                                     display: grid; 
                                     width: 100%;
                                     height: 100%;
                                     grid-template-columns: repeat(5, ${Column_Size}px);
-                                    grid-template-rows: repeat(4, ${Row_Size}px);
+                                    grid-template-rows: repeat(3, ${Row_Size}px);
                                     `;
 };
 
