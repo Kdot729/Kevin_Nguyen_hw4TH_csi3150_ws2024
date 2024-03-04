@@ -46,11 +46,17 @@ function Append_Car_Info(Element_ID, Car_Model)
     for (const [key, value] of Object.entries(Car_Model)) 
     {
         let Paragraph_Element = document.createElement("p");
-        let Car_Info = `${key}: ${value}`;
+        let Capitalized_Word = Capitalize_First_Letter(key); 
+        let Car_Info = `${Capitalized_Word}: ${value}`;
         let Car_Info_Element = document.createTextNode(Car_Info);
     
         Paragraph_Element.appendChild(Car_Info_Element);
         document.getElementById(Element_ID).appendChild(Paragraph_Element);
     };
 
+};
+
+function Capitalize_First_Letter(Word) 
+{
+    return Word.charAt(0).toUpperCase() + Word.slice(1);
 };
