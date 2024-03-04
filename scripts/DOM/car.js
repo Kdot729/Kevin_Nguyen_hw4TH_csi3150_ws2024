@@ -14,7 +14,7 @@ export function Setup_Car_Grid()
                                     `;
 };
 
-export function Iterate_Car_Models(Car_Model)
+export function Append_Car_Card(Car_Model)
 {
     let Car_Element = document.createElement("section");
     let Car_Model_With_Dash = Car_Model["model"].replace(/ /g,"-");
