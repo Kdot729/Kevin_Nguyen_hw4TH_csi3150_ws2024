@@ -1,4 +1,4 @@
-export function Setup_Button_Grid()
+export function Setup_Checkbox_Grid()
 {
     let Button_Container = document.getElementById("check-boxes");
     let Column_Size = innerWidth / 7;
@@ -9,7 +9,6 @@ export function Setup_Button_Grid()
                                     grid-template-columns: repeat(7, ${Column_Size}px);
                                     grid-template-rows: repeat(1, 100%);
                                     `;
-    Append_Buttons();
 };
 
 export function Append_Buttons()
