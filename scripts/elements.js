@@ -10,7 +10,7 @@ export function Setup_Button_Grid()
                                     height: 100%;
                                     grid-row: 1 / span 1;
                                     grid-template-columns: repeat(5, ${Column_Size}px);
-                                    grid-template-rows: repeat(1, 20%);
+                                    grid-template-rows: repeat(1, 100%);
                                     `;
 };
 
