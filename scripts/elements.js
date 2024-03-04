@@ -26,6 +26,7 @@ export function Iterate_Car_Models(Car_Model)
                                     height: 80%;
                                     grid-template-columns: 100%;
                                     grid-template-rows: 44% repeat(7, 8%);
+                                    grid-gap: 3%;
                                 `;
 
     document.getElementById(Root_Div).appendChild(Car_Element);
