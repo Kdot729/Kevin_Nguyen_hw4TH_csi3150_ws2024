@@ -33,10 +33,11 @@ function Iterate_Car_Models(Car_Model)
                                     grid-template-rows: 44% repeat(7, 8%);
                                 `;
 
-    var Car_Image = document.createElement("img");
-    Car_Image.src = '../static/img/car.jpg';
-
     document.getElementById("showcase-cars").appendChild(Car_Element);
+
+    let Car_Image = document.createElement("img");
+    Car_Image.src = '../static/img/car.jpg';
+    document.getElementById(Element_ID).appendChild(Car_Image);
 };
 
 
