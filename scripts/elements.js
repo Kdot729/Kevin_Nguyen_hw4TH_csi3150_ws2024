@@ -21,8 +21,6 @@ export function Setup_Car_Grid()
     let Row_Size = innerHeight / 3;
     Grid_Container.style.cssText =  `
                                     display: grid; 
-                                    width: 100%;
-                                    height: 100%;
                                     grid-row: 2 / span 1;
                                     grid-template-columns: repeat(5, ${Column_Size}px);
                                     grid-template-rows: repeat(3, ${Row_Size}px);
@@ -37,8 +35,6 @@ export function Iterate_Car_Models(Car_Model)
     Car_Element.setAttribute("id", Element_ID);
     Car_Element.style.cssText = `
                                     display: grid; 
-                                    width: 100%;
-                                    height: 100%;
                                     grid-template-columns: 100%;
                                     grid-template-rows: 44% repeat(7, 8%);
                                     grid-gap: 3%;
