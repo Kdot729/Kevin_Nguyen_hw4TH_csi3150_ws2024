@@ -47,7 +47,7 @@ function Append_Car_Info(Element_ID, Car_Model)
     for (let [key, value] of Object.entries(Car_Model)) 
     {
         let Paragraph_Element = document.createElement("p");
-        Paragraph_Element.style.fontSize = "16px";
+        Paragraph_Element.style.fontSize = "14px";
 
 
         var Capitalized_Word = Capitalize_First_Letter(key); 
