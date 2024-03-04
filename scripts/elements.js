@@ -13,6 +13,11 @@ export function Setup_Button_Grid()
                                     `;
 };
 
+export function Append_Buttons()
+{
+    let Button_IDs = ["year-button", "make-button", "model-button", "mileage-button", "price-button", "color-button"];
+};
+
 export function Setup_Car_Grid()
 {
     let Grid_Container = document.getElementById(Root_Div);
