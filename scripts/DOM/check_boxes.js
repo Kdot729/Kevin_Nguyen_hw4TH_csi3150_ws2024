@@ -18,7 +18,6 @@ export function Append_Buttons()
 
     for (let Index = 0; Index < Button_IDs.length; Index++) 
     {
-        let Button_Element = document.createElement("button");
         Button_Element.type = "button";
         Button_Element.setAttribute("id", Button_IDs[Index]);
         document.getElementById("filter-buttons").appendChild(Button_Element);
