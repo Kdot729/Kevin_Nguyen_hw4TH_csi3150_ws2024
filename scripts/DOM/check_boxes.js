@@ -1,6 +1,8 @@
+const Checkbox_ID = "checkboxes";
+
 export function Setup_Checkbox_Grid()
 {
-    let Button_Container = document.getElementById("checkboxes");
+    let Button_Container = document.getElementById(Checkbox_ID);
     let Column_Size = innerWidth / 7;
     Button_Container.style.cssText =  `
                                     display: grid; 
@@ -19,6 +21,6 @@ export function Append_Buttons()
     {
         Button_Element.type = "button";
         Button_Element.setAttribute("id", Button_IDs[Index]);
-        document.getElementById("checkboxes").appendChild(Button_Element);
+        document.getElementById(Checkbox_ID).appendChild(Button_Element);
     };
 };
