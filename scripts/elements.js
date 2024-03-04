@@ -29,7 +29,7 @@ export function Iterate_Car_Models(Car_Model)
     document.getElementById("showcase-cars").appendChild(Car_Element);
 
     Append_Car_Image(Element_ID);
-    Appened_Car_Info(Element_ID, Car_Model);
+    Append_Car_Info(Element_ID, Car_Model);
 };
 
 function Append_Car_Image(Element_ID)
@@ -39,7 +39,7 @@ function Append_Car_Image(Element_ID)
     document.getElementById(Element_ID).appendChild(Car_Image);
 };
 
-function Appened_Car_Info(Element_ID, Car_Model)
+function Append_Car_Info(Element_ID, Car_Model)
 {
     for (const [key, value] of Object.entries(Car_Model)) 
     {
