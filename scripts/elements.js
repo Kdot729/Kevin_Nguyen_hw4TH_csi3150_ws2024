@@ -1,6 +1,6 @@
 const Root_Div = "showcase-cars";
 
-export function Setup_Grid()
+export function Setup_Car_Grid()
 {
     let Grid_Container = document.getElementById(Root_Div);
     let Column_Size = innerWidth / 5;
