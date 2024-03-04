@@ -31,4 +31,19 @@ export function Iterate_Car_Models(Car_Model)
     let Car_Image = document.createElement("img");
     Car_Image.src = '../static/img/car.jpg';
     document.getElementById(Element_ID).appendChild(Car_Image);
+    Appened_Car_Info(Element_ID, Car_Model);
+};
+
+function Appened_Car_Info(Element_ID, Car_Model)
+{
+    for (const [key, value] of Object.entries(Car_Model)) 
+    {
+        let Paragraph_Element = document.createElement("p");
+        let Car_Info = `${key}: ${value}`;
+        let Car_Info_Element = document.createTextNode(Car_Info);
+    
+        Paragraph_Element.appendChild(Car_Info_Element);
+        document.getElementById(Element_ID).appendChild(Paragraph_Element);
+    };
+
 };
