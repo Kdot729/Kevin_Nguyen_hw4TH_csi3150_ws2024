@@ -44,11 +44,18 @@ function Append_Car_Image(Element_ID)
 
 function Append_Car_Info(Element_ID, Car_Model)
 {
-    for (const [key, value] of Object.entries(Car_Model)) 
+    for (let [key, value] of Object.entries(Car_Model)) 
     {
         let Paragraph_Element = document.createElement("p");
         Paragraph_Element.style.fontSize = "16px";
-        let Capitalized_Word = Capitalize_First_Letter(key); 
+
+
+        var Capitalized_Word = Capitalize_First_Letter(key); 
+        if (Capitalized_Word == "GasMileage")
+        {
+            Capitalized_Word = "Gas Mileage";
+        };
+
         let Car_Info = `${Capitalized_Word}: ${value}`;
         let Car_Info_Element = document.createTextNode(Car_Info);
     
