@@ -24,7 +24,6 @@ export function Setup_Car_Grid()
                                     grid-row: 2 / span 1;
                                     grid-template-columns: repeat(5, ${Column_Size}px);
                                     grid-template-rows: repeat(3, ${Row_Size}px);
-                                    grid-gap: 3%;
                                     `;
 };
 
