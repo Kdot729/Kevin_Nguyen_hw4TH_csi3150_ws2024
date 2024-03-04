@@ -1,5 +1,19 @@
 const Root_Div = "showcase-cars";
 
+export function Setup_Button_Grid()
+{
+    let Button_Container = document.getElementById("filter-buttons");
+    let Column_Size = innerWidth / 5;
+    Button_Container.style.cssText =  `
+                                    display: grid; 
+                                    width: 100%;
+                                    height: 100%;
+                                    grid-row: 1 / span 1;
+                                    grid-template-columns: repeat(5, ${Column_Size}px);
+                                    grid-template-rows: repeat(1, 20%);
+                                    `;
+};
+
 export function Setup_Car_Grid()
 {
     let Grid_Container = document.getElementById(Root_Div);
@@ -12,20 +26,6 @@ export function Setup_Car_Grid()
                                     grid-row: 2 / span 1;
                                     grid-template-columns: repeat(5, ${Column_Size}px);
                                     grid-template-rows: repeat(3, ${Row_Size}px);
-                                    `;
-};
-
-export function Setup_Button_Grid()
-{
-    let Button_Container = document.getElementById("filter-buttons");
-    let Column_Size = innerWidth / 5;
-    Button_Container.style.cssText =  `
-                                    display: grid; 
-                                    width: 100%;
-                                    height: 100%;
-                                    grid-row: 1 / span 1;
-                                    grid-template-columns: repeat(5, ${Column_Size}px);
-                                    grid-template-rows: repeat(1, 20%);
                                     `;
 };
 
