@@ -1,6 +1,6 @@
 export function Setup_Button_Grid()
 {
-    let Button_Container = document.getElementById("filter-buttons");
+    let Button_Container = document.getElementById("check-boxes");
     let Column_Size = innerWidth / 6;
     Button_Container.style.cssText =  `
                                     display: grid; 
@@ -20,6 +20,6 @@ export function Append_Buttons()
     {
         Button_Element.type = "button";
         Button_Element.setAttribute("id", Button_IDs[Index]);
-        document.getElementById("filter-buttons").appendChild(Button_Element);
+        document.getElementById("check-boxes").appendChild(Button_Element);
     };
 };
