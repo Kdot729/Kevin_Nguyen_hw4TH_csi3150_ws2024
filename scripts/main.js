@@ -24,6 +24,14 @@ function Iterate_Car_Models(Car_Model)
     let Car_Model_With_Dash = Car_Model["model"].replace(/ /g,"-");
     let Class_Name = `${Car_Model["make"]}-${Car_Model_With_Dash}-${Car_Model["year"]}`;
     Car_Element.classList.add(Class_Name);
+    Car_Element.style.cssText = `
+                                    display: grid; 
+                                    width: 100%;
+                                    height: 100%;
+                                    grid-template-columns: 100%;
+                                    grid-template-rows: 44% repeat(7, 8%);
+                                `;
+
     document.getElementById("showcase-cars").appendChild(Car_Element);
 };
 
