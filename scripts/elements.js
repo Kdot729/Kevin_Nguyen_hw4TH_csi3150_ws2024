@@ -14,6 +14,22 @@ export function Setup_Grid()
                                     `;
 };
 
+export function Setup_Button_Grid()
+{
+    let Button_Container = document.getElementById("filter-buttons");
+    let Column_Size = innerWidth / 5;
+    Button_Container.style.cssText =  `
+                                    display: grid; 
+                                    width: 100%;
+                                    height: 20%;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    grid-template-columns: repeat(5, ${Column_Size}px);
+                                    grid-template-rows: repeat(1, 20%);
+                                    `;
+};
+
 export function Iterate_Car_Models(Car_Model)
 {
     let Car_Element = document.createElement("section");
