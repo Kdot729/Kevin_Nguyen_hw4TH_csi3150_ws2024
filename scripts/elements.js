@@ -28,10 +28,15 @@ export function Iterate_Car_Models(Car_Model)
 
     document.getElementById("showcase-cars").appendChild(Car_Element);
 
+    Append_Car_Image(Element_ID);
+    Appened_Car_Info(Element_ID, Car_Model);
+};
+
+function Append_Car_Image(Element_ID)
+{
     let Car_Image = document.createElement("img");
     Car_Image.src = '../static/img/car.jpg';
     document.getElementById(Element_ID).appendChild(Car_Image);
-    Appened_Car_Info(Element_ID, Car_Model);
 };
 
 function Appened_Car_Info(Element_ID, Car_Model)
