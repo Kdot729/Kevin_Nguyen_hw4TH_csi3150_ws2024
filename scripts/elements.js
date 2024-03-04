@@ -1,6 +1,8 @@
+const Root_Div = "showcase-cars";
+
 export function Setup_Grid()
 {
-    let Grid_Container = document.getElementById("showcase-cars");
+    let Grid_Container = document.getElementById(Root_Div);
     let Column_Size = innerWidth / 5;
     let Row_Size = innerHeight / 3;
     Grid_Container.style.cssText =  `
@@ -26,7 +28,7 @@ export function Iterate_Car_Models(Car_Model)
                                     grid-template-rows: 44% repeat(7, 8%);
                                 `;
 
-    document.getElementById("showcase-cars").appendChild(Car_Element);
+    document.getElementById(Root_Div).appendChild(Car_Element);
 
     Append_Car_Image(Element_ID);
     Append_Car_Info(Element_ID, Car_Model);
