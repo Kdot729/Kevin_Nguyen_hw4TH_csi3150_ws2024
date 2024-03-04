@@ -9,9 +9,18 @@ export function Setup_Button_Grid()
                                     grid-template-columns: repeat(5, ${Column_Size}px);
                                     grid-template-rows: repeat(1, 100%);
                                     `;
+    Append_Buttons();
 };
 
 export function Append_Buttons()
 {
     let Button_IDs = ["year-button", "make-button", "model-button", "mileage-button", "price-button", "color-button"];
+
+    for (let Index = 0; Index < Button_IDs.length; Index++) 
+    {
+        let Button_Element = document.createElement("button");
+        Button_Element.type = "button";
+        Button_Element.setAttribute("id", Button_IDs[Index]);
+        document.getElementById("filter-buttons").appendChild(Button_Element);
+    };
 };
