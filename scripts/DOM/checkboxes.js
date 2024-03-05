@@ -6,10 +6,10 @@ const Checkbox_ID = "checkboxes";
 
 export function Setup_Checkbox_Grid()
 {
-    let Button_Container = document.getElementById(Checkbox_ID);
+    let Checkbox_Container = document.getElementById(Checkbox_ID);
 
     let Column_Size = (innerWidth / 6) - 10;
-    Button_Container.style.cssText =  `
+    Checkbox_Container.style.cssText =  `
                                     display: grid; 
                                     box-sizing: border-box;
                                     grid-row: 1 / span 1;
