@@ -9,17 +9,18 @@ export function Setup_Checkbox_Grid()
     let Checkbox_Container = document.getElementById(Checkbox_ID);
 
     let Column_Size = (innerWidth / 6) - 10;
+    let Button_Width = innerWidth - (Column_Size * 6);
     Checkbox_Container.style.cssText =  `
                                     display: grid; 
                                     box-sizing: border-box;
                                     grid-row: 1 / span 1;
-                                    grid-template-columns: repeat(6, ${Column_Size}px);
+                                    grid-template-columns: repeat(6, ${Column_Size}px) ${Button_Width}px;
                                     grid-template-rows: repeat(1, 100%);
                                     `;
 
     let Filter_By = ["min-year", "max-year", "make", "mileage", "max-price", "color"];
     Append_Sections(Filter_By);
-    Append_Button(innerWidth - (Column_Size * 6));
+    Append_Button(Button_Width);
 
 };
 
