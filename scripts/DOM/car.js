@@ -1,4 +1,4 @@
-import { Capitalize_First_Letter } from "./utility";
+import { Capitalize_First_Letter } from "../utility";
 
 const Root_Div = "showcase-cars";
 
