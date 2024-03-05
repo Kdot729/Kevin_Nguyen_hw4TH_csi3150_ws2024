@@ -1,6 +1,6 @@
-import { Capitalize_First_Letter } from "../utility.js";
+import { Capitalize_First_Letter, Get_Array_of_Values } from "../utility.js";
 import usedCars from "../usedCars.js";
-import {Filter_By_Min_Year } from "../filter.js";
+import { Filter_By_Min_Year } from "../filter.js";
 
 const Checkbox_ID = "checkboxes";
 
@@ -63,16 +63,10 @@ function Append_Header(Index_of_Filter_By)
 
 function Append_Checkboxes(Filter_By)
 {
-    let Checkboxes_to_Create = ["year", "make", "milage", "price", "color"];
-    let Year_Checkbox = []
-    
-    for (let Data_Index = 0; Data_Index < usedCars.length; Data_Index++)
+    let Checkboxes_to_Create = ["year", "make", "mileage", "price", "color"];
+    let Distinct_Values = []
+    for (let Checkbox_Index = 0; Checkbox_Index < Checkboxes_to_Create.length; Checkbox_Index++)
     {
-        if (!Year_Checkbox.includes(usedCars[Data_Index]["year"]))
-        {
-            Year_Checkbox.push(usedCars[Data_Index]["year"])
-        };
-
+        Distinct_Values.push(Get_Array_of_Values(usedCars, Checkboxes_to_Create[Checkbox_Index]))
     };
-    console.log(Year_Checkbox)
 };
