@@ -2,7 +2,6 @@ import usedCars from "./usedCars.js";
 
 export function Filter_By_Parameters(Filter_Parameters)
 {
-    console.log(Filter_Parameters)
     let Array_of_Dictionaries = [];
     for (let Index = 0; Index < Filter_Parameters.length; Index++)
     {
@@ -12,12 +11,19 @@ export function Filter_By_Parameters(Filter_Parameters)
         Array_of_Dictionaries.push(Emtpy_Dictionary);
     };
 
+    let Cars_Meet_Requirements = []
+    for (let [key, Dictionary_Value] of Object.entries(usedCars)) 
+    {
+        for (let Index = 0; Index < Array_of_Dictionaries.length; Index++)
+        {
+            let Key_for_Dictionary = Object.keys(Array_of_Dictionaries[Index])[0];
 
-    console.log(Array_of_Dictionaries)
-    // let Filtered_Data =  usedCars.filter((used_car) =>
-    // {
-    //     return used_car.includes(Filter_Parameters);
-    // });
+            if (Dictionary_Value[Key_for_Dictionary] == Array_of_Dictionaries[Index][Key_for_Dictionary])
+            {
+                Cars_Meet_Requirements.push(Dictionary_Value);
+            };
+        };
+    };
 
-    // console.log(Filtered_Data);
+    return Cars_Meet_Requirements;
 };
