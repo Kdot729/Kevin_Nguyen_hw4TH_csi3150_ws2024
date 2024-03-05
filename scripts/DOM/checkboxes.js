@@ -7,7 +7,8 @@ const Checkbox_ID = "checkboxes";
 export function Setup_Checkbox_Grid()
 {
     let Button_Container = document.getElementById(Checkbox_ID);
-    let Column_Size = innerWidth / 6;
+
+    let Column_Size = (innerWidth / 6) - 10;
     Button_Container.style.cssText =  `
                                     display: grid; 
                                     box-sizing: border-box;
@@ -18,7 +19,15 @@ export function Setup_Checkbox_Grid()
 
     let Filter_By = ["min-year", "max-year", "make", "mileage", "max-price", "color"];
     Append_Sections(Filter_By);
+    Append_Button(innerWidth - (Column_Size * 6));
 
+};
+
+function Append_Button(Button_Width)
+{
+    let Checkbox_Button = document.createElement("BUTTON");
+    Checkbox_Button.type = "button";
+    document.getElementById(Checkbox_ID).appendChild(Checkbox_Button);
 };
 
 export function Append_Sections(Filter_By)
@@ -71,7 +80,6 @@ function Append_Checkboxes(Filter_By)
         Input.type = "checkbox";
         let ID = `${Filter_By}-${Distinct_Values[Distinct_Values_Index]}`;
         let Value = Distinct_Values[Distinct_Values_Index];
-        console.log(ID)
         Input.setAttribute("id", ID);
         Input.setAttribute("name", ID);
         Input.setAttribute("value", Value);
