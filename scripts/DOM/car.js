@@ -1,5 +1,4 @@
 import { Capitalize_First_Letter } from "../utility.js";
-
 const Root_Div = "showcase-cars";
 
 export function Setup_Car_Grid()
@@ -62,4 +61,18 @@ function Append_Car_Info(Element_ID, Car_Model)
         document.getElementById(Element_ID).appendChild(Paragraph_Element);
     };
 
+};
+
+export function Remove_Cars()
+{
+    let Parent_Element = document.getElementById("showcase-cars");
+    while (Parent_Element.firstChild) 
+    {
+        Parent_Element.firstChild.remove();
+    };
+};
+
+export function Append_Cars_Meeting_Requirements(Cars_to_Append)
+{
+    Cars_to_Append.map(Append_Car_Card);
 };
