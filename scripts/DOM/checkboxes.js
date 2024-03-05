@@ -42,7 +42,7 @@ function Apply_Filter()
     
     for (var Checked_Index = 0; Checked_Index < Checked.length; Checked_Index++) 
     {
-        Hold_Checked_Checkboxes.push(Checked[Checked_Index].value)
+        Hold_Checked_Checkboxes.push(Checked[Checked_Index].id)
     }
     console.log(Hold_Checked_Checkboxes)
 };
