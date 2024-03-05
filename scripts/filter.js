@@ -1,6 +1,6 @@
 import usedCars from "./usedCars.js";
 
-export function Filter_By_Min_Year(Selected_Year)
+export function Filter_By_Parameters(Selected_Year)
 {
     let Year_Car =  usedCars.filter((used_car) =>
     {
