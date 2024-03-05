@@ -1,6 +1,6 @@
 import usedCars from "./usedCars.js";
 import { Setup_Car_Grid, Append_Car_Card } from "./DOM/car.js";
-import { Setup_Checkbox_Grid } from "./DOM/check_boxes.js";
+import { Setup_Checkbox_Grid } from "./DOM/checkboxes.js";
 
 Setup_Checkbox_Grid();
 Setup_Car_Grid();
