@@ -1,3 +1,5 @@
+import { Capitalize_First_Letter } from "../utility.js";
+
 const Checkbox_ID = "checkboxes";
 
 export function Setup_Checkbox_Grid()
@@ -32,7 +34,8 @@ export function Append_Sections(Filter_By)
 export function Append_Header(Index_of_Filter_By)
 {
     let Header = document.createElement("h1");
-    let Header_Text = document.createTextNode(Index_of_Filter_By);
+    let Capitalized_Word = Capitalize_First_Letter(Index_of_Filter_By);
+    let Header_Text = document.createTextNode(Capitalized_Word);
     Header.appendChild(Header_Text);
     document.getElementById(Index_of_Filter_By).appendChild(Header);
 }
