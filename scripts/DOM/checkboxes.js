@@ -28,9 +28,16 @@ function Append_Button(Button_Width)
 {
     let Checkbox_Button = document.createElement("BUTTON");
     Checkbox_Button.type = "button";
+    Checkbox_Button.onclick = Apply_Filter();
     let Button_Text = document.createTextNode("Submit");
+
     Checkbox_Button.appendChild(Button_Text);
     document.getElementById(Checkbox_ID).appendChild(Checkbox_Button);
+};
+
+function Apply_Filter()
+{
+
 };
 
 export function Append_Sections(Filter_By)
