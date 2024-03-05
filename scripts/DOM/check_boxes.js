@@ -24,5 +24,15 @@ export function Append_Sections(Filter_By)
         let Section = document.createElement("section");
         Section.setAttribute("id", Filter_By[Index]);
         document.getElementById(Checkbox_ID).appendChild(Section);
+
+        Append_Header(Filter_By[Index])
     };
 };
+
+export function Append_Header(Index_of_Filter_By)
+{
+    let Header = document.createElement("h1");
+    let Header_Text = document.createTextNode(Index_of_Filter_By);
+    Header.appendChild(Header_Text);
+    document.getElementById(Index_of_Filter_By).appendChild(Header);
+}
