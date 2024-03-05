@@ -45,7 +45,17 @@ function Apply_Filter()
         Hold_Checked_Checkboxes.push(Checked[Checked_Index].id)
     }
 
-    console.log(Hold_Checked_Checkboxes)
+    Filter_By_Parameters(Hold_Checked_Checkboxes);
+    Remove_Cars();
+};
+
+function Remove_Cars()
+{
+    let Parent_Element = document.getElementById("showcase-cars");
+    while (Parent_Element.firstChild) 
+    {
+        Parent_Element.firstChild.remove();
+    };
 };
 
 export function Append_Sections(Filter_By)
