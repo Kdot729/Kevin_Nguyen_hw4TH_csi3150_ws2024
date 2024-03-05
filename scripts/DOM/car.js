@@ -1,3 +1,5 @@
+import { Capitalize_First_Letter } from "./utility";
+
 const Root_Div = "showcase-cars";
 
 export function Setup_Car_Grid()
@@ -60,9 +62,4 @@ function Append_Car_Info(Element_ID, Car_Model)
         document.getElementById(Element_ID).appendChild(Paragraph_Element);
     };
 
-};
-
-function Capitalize_First_Letter(Word) 
-{
-    return Word.charAt(0).toUpperCase() + Word.slice(1);
 };
