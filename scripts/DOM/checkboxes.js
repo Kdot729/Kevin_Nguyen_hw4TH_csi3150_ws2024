@@ -28,7 +28,7 @@ function Append_Button(Button_Width)
 {
     let Checkbox_Button = document.createElement("BUTTON");
     Checkbox_Button.type = "button";
-    Checkbox_Button.onclick = Apply_Filter();
+    Checkbox_Button.onclick = Apply_Filter;
     let Button_Text = document.createTextNode("Submit");
 
     Checkbox_Button.appendChild(Button_Text);
@@ -37,7 +37,14 @@ function Append_Button(Button_Width)
 
 function Apply_Filter()
 {
-
+    var Hold_Checked_Checkboxes = []
+    var Checked = document.querySelectorAll('input[type=checkbox]:checked')
+    
+    for (var Checked_Index = 0; Checked_Index < Checked.length; Checked_Index++) 
+    {
+        Hold_Checked_Checkboxes.push(Checked[Checked_Index].value)
+    }
+    console.log(Hold_Checked_Checkboxes)
 };
 
 export function Append_Sections(Filter_By)
