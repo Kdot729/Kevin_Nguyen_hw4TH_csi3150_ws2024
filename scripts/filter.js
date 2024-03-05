@@ -6,7 +6,14 @@ export function Filter_By_Parameters(Filter_Parameters)
     for (let Index = 0; Index < Filter_Parameters.length; Index++)
     {
         let Emtpy_Dictionary = {};
-        let Key_and_Value = Filter_Parameters[Index].split("-");
+        let Key_and_Value = Filter_Parameters[Index].split("-")
+
+        if (Key_and_Value[0] == "min" || Key_and_Value[0] == "max")
+        {
+            Key_and_Value.shift();
+        };
+
+        console.log(Key_and_Value)
         Emtpy_Dictionary[Key_and_Value[0]] = Key_and_Value[1]
         Array_of_Dictionaries.push(Emtpy_Dictionary);
     };
@@ -25,5 +32,6 @@ export function Filter_By_Parameters(Filter_Parameters)
         };
     };
 
+    console.log(Cars_Meet_Requirements);
     return Cars_Meet_Requirements;
 };
