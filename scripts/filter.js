@@ -12,8 +12,6 @@ export function Filter_By_Parameters(Filter_Parameters)
         {
             Key_and_Value.shift();
         };
-
-        console.log(Key_and_Value)
         Emtpy_Dictionary[Key_and_Value[0]] = Key_and_Value[1]
         Array_of_Dictionaries.push(Emtpy_Dictionary);
     };
@@ -25,7 +23,7 @@ export function Filter_By_Parameters(Filter_Parameters)
         {
             let Key_for_Dictionary = Object.keys(Array_of_Dictionaries[Index])[0];
 
-            if (Dictionary_Value[Key_for_Dictionary] == Array_of_Dictionaries[Index][Key_for_Dictionary])
+            if (Dictionary_Value[Key_for_Dictionary] == Array_of_Dictionaries[Index][Key_for_Dictionary] && !Cars_Meet_Requirements.includes(Dictionary_Value) )
             {
                 Cars_Meet_Requirements.push(Dictionary_Value);
             };
