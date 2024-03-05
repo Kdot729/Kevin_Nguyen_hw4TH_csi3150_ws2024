@@ -12,11 +12,11 @@ export function Setup_Checkbox_Grid()
                                     display: grid; 
                                     box-sizing: border-box;
                                     grid-row: 1 / span 1;
-                                    grid-template-columns: repeat(7, ${Column_Size}px);
+                                    grid-template-columns: repeat(6, ${Column_Size}px);
                                     grid-template-rows: repeat(1, 100%);
                                     `;
 
-    let Filter_By = ["min-year", "max-year", "make", "model", "mileage", "max-price", "color"];
+    let Filter_By = ["min-year", "max-year", "make", "mileage", "max-price", "color"];
     Append_Sections(Filter_By);
 
 };
