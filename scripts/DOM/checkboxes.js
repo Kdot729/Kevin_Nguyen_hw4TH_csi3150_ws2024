@@ -18,7 +18,6 @@ export function Setup_Checkbox_Grid()
 
     let Filter_By = ["min-year", "max-year", "make", "mileage", "max-price", "color"];
     Append_Sections(Filter_By);
-    Append_Checkboxes(Filter_By);
 
 };
 
@@ -63,34 +62,27 @@ function Append_Header(Index_of_Filter_By)
 
 function Append_Checkboxes(Filter_By)
 {
-    let Checkboxes_to_Create = ["year", "year", "make", "mileage", "price", "color"];
-    let Distinct_Values = []
-    for (let Checkbox_Index = 0; Checkbox_Index < Checkboxes_to_Create.length; Checkbox_Index++)
+
+    let Distinct_Values = Get_Array_of_Values(usedCars, Filter_By);
+    for (let Distinct_Values_Index = 0; Distinct_Values_Index < Distinct_Values.length; Distinct_Values_Index++)
     {
-        Distinct_Values.push(Get_Array_of_Values(usedCars, Checkboxes_to_Create[Checkbox_Index]))
+
+        let Input = document.createElement("input");
+        Input.type = "checkbox";
+        let ID = `${Filter_By}-${Distinct_Values[Distinct_Values_Index]}`;
+        let Value = Distinct_Values[Distinct_Values_Index];
+        console.log(ID)
+        Input.setAttribute("id", ID);
+        Input.setAttribute("name", ID);
+        Input.setAttribute("value", Value);
+
+        let Label = document.createElement("Label");
+        var Label_Text = document.createTextNode(Value);
+        Label.setAttribute("for", Value);
+        Label.appendChild(Label_Text);
+
+        document.getElementById(Filter_By).appendChild(Input);
+        document.getElementById(Filter_By).appendChild(Label);
     };
-
-    console.log("Distinct",Distinct_Values);
-    // for (let Filter_By_Index = 0; Filter_By_Index < Filter_By.length; Filter_By_Index++)
-    // {
-
-    //     let Input = document.createElement("input");
-    //     Input.type = "checkbox"
-    //     let ID = `${Filter_By}-${Distinct_Values[0][Filter_By_Index]}`;
-    //     console.log(ID)
-        // Input.setAttribute("id", ID);
-        // Input.setAttribute("name", ID);
-        // Input.setAttribute("value", Distinct_Values[Filter_By_Index]);
-
-        // let Label = document.createElement("Label");
-        // var Label_Text = document.createTextNode(Distinct_Values[Filter_By_Index]);
-        // Label.setAttribute("for", Distinct_Values[Filter_By_Index]);
-        // Label.appendChild(Label_Text);
-
-        // document.getElementById(Filter_By[Filter_By_Index]).appendChild(Input);
-        // document.getElementById(Filter_By[Filter_By_Index]).appendChild(Label);
-
-        // console.log(Distinct_Values[Filter_By_Index])
-    // };
 
 };
