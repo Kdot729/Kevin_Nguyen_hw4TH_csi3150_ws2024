@@ -7,7 +7,7 @@ const Checkbox_ID = "checkboxes";
 export function Setup_Checkbox_Grid()
 {
     let Button_Container = document.getElementById(Checkbox_ID);
-    let Column_Size = innerWidth / 7;
+    let Column_Size = innerWidth / 6;
     Button_Container.style.cssText =  `
                                     display: grid; 
                                     box-sizing: border-box;
