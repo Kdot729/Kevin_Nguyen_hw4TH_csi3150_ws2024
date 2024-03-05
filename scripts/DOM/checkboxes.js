@@ -69,7 +69,28 @@ function Append_Checkboxes(Filter_By)
     {
         Distinct_Values.push(Get_Array_of_Values(usedCars, Checkboxes_to_Create[Checkbox_Index]))
     };
-    console.log(Distinct_Values)
 
+    console.log("Distinct",Distinct_Values);
+    // for (let Filter_By_Index = 0; Filter_By_Index < Filter_By.length; Filter_By_Index++)
+    // {
+
+    //     let Input = document.createElement("input");
+    //     Input.type = "checkbox"
+    //     let ID = `${Filter_By}-${Distinct_Values[0][Filter_By_Index]}`;
+    //     console.log(ID)
+        // Input.setAttribute("id", ID);
+        // Input.setAttribute("name", ID);
+        // Input.setAttribute("value", Distinct_Values[Filter_By_Index]);
+
+        // let Label = document.createElement("Label");
+        // var Label_Text = document.createTextNode(Distinct_Values[Filter_By_Index]);
+        // Label.setAttribute("for", Distinct_Values[Filter_By_Index]);
+        // Label.appendChild(Label_Text);
+
+        // document.getElementById(Filter_By[Filter_By_Index]).appendChild(Input);
+        // document.getElementById(Filter_By[Filter_By_Index]).appendChild(Label);
+
+        // console.log(Distinct_Values[Filter_By_Index])
+    // };
 
 };
