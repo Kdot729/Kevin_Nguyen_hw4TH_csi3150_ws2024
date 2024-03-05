@@ -28,6 +28,8 @@ function Append_Button(Button_Width)
 {
     let Checkbox_Button = document.createElement("BUTTON");
     Checkbox_Button.type = "button";
+    let Button_Text = document.createTextNode("Submit");
+    Checkbox_Button.appendChild(Button_Text);
     document.getElementById(Checkbox_ID).appendChild(Checkbox_Button);
 };
 
