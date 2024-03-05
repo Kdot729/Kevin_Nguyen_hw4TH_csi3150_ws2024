@@ -1,6 +1,6 @@
 import { Capitalize_First_Letter, Get_Array_of_Values } from "../utility.js";
 import usedCars from "../usedCars.js";
-import { Filter_By_Min_Year } from "../filter.js";
+import { Filter_By_Parameters } from "../filter.js";
 
 const Checkbox_ID = "checkboxes";
 
@@ -44,6 +44,7 @@ function Apply_Filter()
     {
         Hold_Checked_Checkboxes.push(Checked[Checked_Index].id)
     }
+
     console.log(Hold_Checked_Checkboxes)
 };
 
