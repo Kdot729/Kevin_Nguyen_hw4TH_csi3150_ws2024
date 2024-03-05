@@ -50,7 +50,10 @@ function Append_Header(Index_of_Filter_By)
     {
         Capitalized_Words_Array.push(Capitalize_First_Letter(Split_Word[Index]));
     };
-
+    Header.style.cssText = `
+                            grid-column: 1 / span 2;
+                            text-align: center
+                            `;
     let Capitalized_Word = Capitalized_Words_Array.join(" ")
 
     let Header_Text = document.createTextNode(Capitalized_Word);
