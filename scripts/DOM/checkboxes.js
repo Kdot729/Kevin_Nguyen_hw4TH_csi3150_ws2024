@@ -18,6 +18,7 @@ export function Setup_Checkbox_Grid()
 
     let Filter_By = ["min-year", "max-year", "make", "mileage", "max-price", "color"];
     Append_Sections(Filter_By);
+    Append_Checkboxes(Filter_By);
 
 };
 
@@ -52,7 +53,18 @@ function Append_Header(Index_of_Filter_By)
     document.getElementById(Index_of_Filter_By).appendChild(Header);
 };
 
-function Append_Checkboxes()
+function Append_Checkboxes(Filter_By)
 {
-    let Checkboxes_to_Create = ["year", "make", "milage", "price", "color"]
+    let Checkboxes_to_Create = ["year", "make", "milage", "price", "color"];
+    let Year_Checkbox = []
+    
+    for (let Data_Index = 0; Data_Index < usedCars.length; Data_Index++)
+    {
+        if (!Year_Checkbox.includes(usedCars[Data_Index]["year"]))
+        {
+            Year_Checkbox.push(usedCars[Data_Index]["year"])
+        };
+
+    };
+    console.log(Year_Checkbox)
 };
