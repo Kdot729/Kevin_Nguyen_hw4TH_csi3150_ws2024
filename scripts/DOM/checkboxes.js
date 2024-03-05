@@ -34,7 +34,16 @@ export function Append_Sections(Filter_By)
 export function Append_Header(Index_of_Filter_By)
 {
     let Header = document.createElement("h1");
-    let Capitalized_Word = Capitalize_First_Letter(Index_of_Filter_By);
+    let Split_Word = Index_of_Filter_By.split("-");
+
+    var Capitalized_Words_Array = [];
+    for (let Index = 0; Index < Split_Word.length; Index++)
+    {
+        Capitalized_Words_Array.push(Capitalize_First_Letter(Split_Word[Index]));
+    };
+
+    let Capitalized_Word = Capitalized_Words_Array.join(" ")
+
     let Header_Text = document.createTextNode(Capitalized_Word);
     Header.appendChild(Header_Text);
     document.getElementById(Index_of_Filter_By).appendChild(Header);
