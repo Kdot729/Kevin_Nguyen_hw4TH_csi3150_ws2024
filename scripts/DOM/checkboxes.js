@@ -28,6 +28,11 @@ export function Append_Sections(Filter_By)
     {
         let Section = document.createElement("section");
         Section.setAttribute("id", Filter_By[Index]);
+        Section.style.cssText = `
+                                    display: grid; 
+                                    grid-template-columns: repeat(2, 50%);
+                                    grid-template-rows: 10% repeat(15, 6%);
+                                `;
         document.getElementById(Checkbox_ID).appendChild(Section);
 
         Append_Header(Filter_By[Index]);
