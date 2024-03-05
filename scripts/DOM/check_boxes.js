@@ -15,12 +15,6 @@ export function Setup_Checkbox_Grid()
 
 export function Append_Buttons()
 {
-    let Button_IDs = ["year-button", "make-button", "model-button", "mileage-button", "price-button", "color-button"];
-
-    for (let Index = 0; Index < Button_IDs.length; Index++) 
-    {
-        Button_Element.type = "button";
-        Button_Element.setAttribute("id", Button_IDs[Index]);
-        document.getElementById(Checkbox_ID).appendChild(Button_Element);
-    };
+    
+    let Filter_By = ["min-year", "min-year", "make", "model", "mileage", "price", "color"];
 };
