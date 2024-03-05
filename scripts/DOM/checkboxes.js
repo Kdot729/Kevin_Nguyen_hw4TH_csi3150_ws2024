@@ -1,6 +1,7 @@
 import { Capitalize_First_Letter, Get_Array_of_Values } from "../utility.js";
 import usedCars from "../usedCars.js";
 import { Filter_By_Parameters } from "../filter.js";
+import { Append_Car_Card } from "./car.js";
 
 const Checkbox_ID = "checkboxes";
 
@@ -45,8 +46,9 @@ function Apply_Filter()
         Hold_Checked_Checkboxes.push(Checked[Checked_Index].id)
     }
 
-    Filter_By_Parameters(Hold_Checked_Checkboxes);
+    let Cars_to_Append = Filter_By_Parameters(Hold_Checked_Checkboxes);
     Remove_Cars();
+    Append_Cars_Meeting_Requirements(Cars_to_Append);
 };
 
 function Remove_Cars()
@@ -56,6 +58,11 @@ function Remove_Cars()
     {
         Parent_Element.firstChild.remove();
     };
+};
+
+function Append_Cars_Meeting_Requirements(Cars_to_Append)
+{
+    Cars_to_Append.map(Append_Car_Card);
 };
 
 export function Append_Sections(Filter_By)
