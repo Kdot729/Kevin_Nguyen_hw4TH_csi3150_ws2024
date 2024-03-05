@@ -1,4 +1,6 @@
 import { Capitalize_First_Letter } from "../utility.js";
+import usedCars from "../usedCars.js";
+import {Filter_By_Min_Year } from "../filter.js";
 
 const Checkbox_ID = "checkboxes";
 
@@ -27,11 +29,12 @@ export function Append_Sections(Filter_By)
         Section.setAttribute("id", Filter_By[Index]);
         document.getElementById(Checkbox_ID).appendChild(Section);
 
-        Append_Header(Filter_By[Index])
+        Append_Header(Filter_By[Index]);
+        Append_Checkboxes(Filter_By[Index]);
     };
 };
 
-export function Append_Header(Index_of_Filter_By)
+function Append_Header(Index_of_Filter_By)
 {
     let Header = document.createElement("h1");
     let Split_Word = Index_of_Filter_By.split("-");
@@ -47,4 +50,9 @@ export function Append_Header(Index_of_Filter_By)
     let Header_Text = document.createTextNode(Capitalized_Word);
     Header.appendChild(Header_Text);
     document.getElementById(Index_of_Filter_By).appendChild(Header);
-}
+};
+
+function Append_Checkboxes()
+{
+    let Checkboxes_to_Create = ["year", "make", "milage", "price", "color"]
+};
